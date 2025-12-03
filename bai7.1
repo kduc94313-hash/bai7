@@ -1,0 +1,14 @@
+input_file = open('D:/a.txt', 'r')
+
+for line in input_file:
+    line = line.rstrip('\n')
+    l = len(line)
+    s = ''
+    while l >= 1:
+        s += line[l-1]
+        l -= 1
+    print(s)
+
+input_file.close()
+
+print("245752021610021 Dau Van Khanh Duc")
