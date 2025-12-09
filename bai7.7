@@ -1,0 +1,8 @@
+def bai7_dem_so_dong():
+print("\n=== BÀI 7: Đếm số dòng ===")
+try:
+with open("test.txt", "r", encoding="utf-8") as f:
+so_dong = sum(1 for _ in f)
+print(f"Số dòng trong file: {so_dong}")
+except FileNotFoundError:
+print("Không tìm thấy file!") 
