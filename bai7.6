@@ -1,0 +1,10 @@
+def file_read_from_tail(fname, nlines):
+print(f"\n=== BÀI 6: {nlines} dòng cuối của {fname} ===")
+try:
+with open(fname, "r", encoding="utf-8") as f:
+# deque với maxlen sẽ tự động bỏ phần tử cũ khi đầy
+last_lines = deque(f, maxlen=nlines) 130
+for line in last_lines:
+print(line.rstrip())
+except FileNotFoundError:
+print("Không tìm thấy file!") 
