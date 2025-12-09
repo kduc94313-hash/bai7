@@ -1,0 +1,16 @@
+def bai5_ghi_va_doc():
+print("\n=== BÀI 5: Ghi (nối) vào file và hiển thị ===")
+filename = "abc.txt" 101
+# Ghi đè (hoặc tạo mới)
+with open(filename, "w", encoding="utf-8") as f:
+f.write("Python Exercises\n")
+f.write("Java Exercises\n")
+f.write("C++ Exercises\n")	
+# Nối thêm
+with open(filename, "a", encoding="utf-8") as f:
+f.write("Thêm dòng mới lúc: " +
+import ('datetime').datetime.now().strftime("%H:%M:%S") + "\n") 112
+# Đọc và in
+with open(filename, "r", encoding="utf-8") as f:
+print("Nội dung file abc.txt:")
+print(f.read())
