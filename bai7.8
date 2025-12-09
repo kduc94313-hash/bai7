@@ -1,0 +1,12 @@
+def bai8_ghi_danh_sach():
+print("\n=== BÀI 8: Ghi danh sách vào file ===")
+ds = ["Apple", "Banana", "Cherry", "Durian", 2025, "Python"]
+filename = "danhsach.txt" 161
+with open(filename, "w", encoding="utf-8") as f:
+for item in ds:
+f.write(str(item) + "\n") 
+print(f"Đã ghi {len(ds)} phần tử vào {filename}") 
+# Đọc lại kiểm tra
+with open(filename, "r", encoding="utf-8") as f:
+print("Nội dung file:")
+print(f.read())
