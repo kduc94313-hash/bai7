@@ -1,0 +1,14 @@
+def bai2_dem_thong_ke():
+print("\n=== BÀI 2: Thống kê file ===")
+try:
+with open("test.txt", "r", encoding="utf-8") as f:
+lines = f.readlines()
+so_dong = len(lines)
+so_tu = sum(len(line.split()) for line in lines)
+so_ky_tu = sum(len(line) for line in lines) # kể cả khoảng
+trắng và \n 52
+print(f"Số dòng	: {so_dong}")
+print(f"Số từ	: {so_tu}")
+print(f"Số ký tự	: {so_ky_tu}")
+except FileNotFoundError:
+print("Không tìm thấy file!") 
