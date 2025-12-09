@@ -1,0 +1,9 @@
+def bai3_doc_toan_bo():
+print("\n=== BÀI 3: Đọc toàn bộ nội dung file ===")
+try:
+with open("test.txt", "r", encoding="utf-8") as f:
+noidung = f.read()
+print("Nội dung file:")
+print(noidung)
+except FileNotFoundError:
+print("Không tìm thấy file!") 
