@@ -1,0 +1,10 @@
+def file_read_from_head(fname, nlines):
+print(f"\n=== BÀI 4: {nlines} dòng đầu tiên của {fname} ===")
+try:
+with open(fname, "r", encoding="utf-8") as f:
+for i, line in enumerate(f):
+if i >= nlines:
+break
+print(line.rstrip())
+except FileNotFoundError:
+print("Không tìm thấy file!") 
